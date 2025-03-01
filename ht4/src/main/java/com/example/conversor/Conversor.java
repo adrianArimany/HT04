@@ -23,7 +23,7 @@ public abstract class Conversor implements IConversor{
         return valor;
     }
 
-    protected String getCadenaPostFix(){
+    public String getCadenaPostFix(){
         return Cadenapostfix;
     };
 
