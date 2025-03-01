@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
     public void runGUI() {
         SwingUtilities.invokeLater(() -> {
             CalculadoraView view = new CalculadoraView();
-            new CalculadoraController(view); 
+            CalculadoraController controller = new CalculadoraController(view);
             view.setVisible(true);
         });
     }
