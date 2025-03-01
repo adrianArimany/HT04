@@ -3,6 +3,7 @@ package com.example;
 public class CoversorListaSimple extends Conversor {
     public CoversorListaSimple(){};
 
+    @Override
     public void InfixToPostFix(String cadena){
         String cadenapostfix = "";
         String[] tokens = cadena.split("");
