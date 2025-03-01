@@ -4,7 +4,7 @@ public class ConversorListaDoble extends Conversor{
     public ConversorListaDoble(){};
 
     @Override
-    public String InfixToPostFix(String cadena){
+    public String convert(String cadena){
         String cadenapostfix = "";
         String[] tokens = cadena.split("");
         ListaSimple<String> pila = new ListaSimple<>();

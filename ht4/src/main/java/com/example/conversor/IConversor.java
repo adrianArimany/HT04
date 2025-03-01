@@ -1,8 +1,12 @@
 package com.example.conversor;
 
 public interface IConversor {
-    public default String InfixToPostFix(String cadena) {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'InfixToPostFix'");
-        }
+    /**
+     * Converts an infix expression into a postfix expression.
+     *
+     * @param infix the infix expression
+     * @return the converted postfix expression
+     */
+    String convert(String infix);
 }
+

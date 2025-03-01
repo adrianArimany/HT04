@@ -43,8 +43,8 @@ public class CalculadoraModel {
                         default -> 1;
                     }; // default to Standard
 
-                    Conversor conv = factory.getConversor(conversorOptionInt);
-                    String postfixExpression = conv.InfixToPostFix(expression);
+                    Conversor conv = factory.getConversor(String.valueOf(conversorOptionInt));
+                    String postfixExpression = conv.convert(expression);
                     result = calculator.evaluate(postfixExpression);
                     results.add(expression + " (converted to " + postfixExpression + ") = " + result);
                 } else {

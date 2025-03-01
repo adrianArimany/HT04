@@ -7,7 +7,7 @@ public class ConversorArrayList extends Conversor{
     public ConversorArrayList(){};
     
     @Override
-    public String InfixToPostFix(String cadena){
+    public String convert(String cadena){
         String cadenapostfix = "";
         String[] Tokens = cadena.split("");
         ArrayList<String> ArrayTokens = new ArrayList<>();

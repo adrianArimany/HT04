@@ -4,7 +4,7 @@ public class CoversorListaSimple extends Conversor {
     public CoversorListaSimple(){};
 
     @Override
-    public String InfixToPostFix(String cadena){
+    public String convert(String cadena){
         String cadenapostfix = "";
         String[] tokens = cadena.split("");
         ListaSimple<String> pila = new ListaSimple<>();

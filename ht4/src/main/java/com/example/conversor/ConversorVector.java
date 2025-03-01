@@ -7,7 +7,7 @@ public class ConversorVector extends Conversor {
     public ConversorVector() {}
     
     @Override
-    public String InfixToPostFix(String cadena) {
+    public String convert(String cadena) {
         String cadenapostfix = "";
         String[] Tokens = cadena.split("");
         Vector<String> vectorTokens = new Vector<>();

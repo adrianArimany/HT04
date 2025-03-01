@@ -3,6 +3,10 @@ package com.example.conversor;
 public abstract class Conversor implements IConversor{
     protected String Cadenapostfix;
 
+
+    @Override
+    public abstract String convert(String infix);
+
     protected boolean isNumber(String str) {
         return str.matches("-?\\d+(\\.\\d+)?");
     }

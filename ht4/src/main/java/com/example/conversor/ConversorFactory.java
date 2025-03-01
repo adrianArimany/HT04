@@ -1,13 +1,16 @@
 package com.example.conversor;
 
 public class ConversorFactory {
-    public Conversor getConversor(int cond){
-        return switch (cond) {
-            case 1 -> new CoversorStack();
-            case 2 -> new ConversorArrayList();
-            case 3 -> new ConversorVector();
-            case 4 -> new CoversorListaSimple();
-            default -> new ConversorListaDoble();
-        };
+    public Conversor getConversor(String option) {
+        return switch (option.toLowerCase()) {
+            case "stack" -> new CoversorStack();
+            case "arraylist" -> new ConversorArrayList();
+            case "vector" -> new ConversorVector();
+            case "listasimple" -> new CoversorListaSimple();
+            case "listadouble" -> new ConversorListaDoble();
+            default -> new CoversorStack();
+        }; 
     }
-}
+    
+    }
+
