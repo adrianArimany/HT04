@@ -1,4 +1,6 @@
-import java.util.*;
+package com.example;
+
+import java.util.ArrayList;
 
 public class ConversorArrayList extends Conversor{
 

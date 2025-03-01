@@ -1,3 +1,5 @@
+package com.example;
+
 class ListaSimple<T> extends ListaAbstracta<T> {
     private class Nodo {
         T dato;
