@@ -19,7 +19,7 @@ public class RPNCalculator implements ICalculadora {
     @Override
     public int evaluate(String expressionString) {
         final Stack<Integer> operandStack = new Stack<>();
-        final String[] expressionTokens = expressionString.split("\\s+");
+        final String[] expressionTokens = expressionString.split("");
 
         try {
             for (final String token : expressionTokens) {

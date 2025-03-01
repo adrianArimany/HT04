@@ -1,5 +1,6 @@
 package com.example.conversor;
 
+
 public abstract class Conversor implements IConversor{
     protected String Cadenapostfix;
 
