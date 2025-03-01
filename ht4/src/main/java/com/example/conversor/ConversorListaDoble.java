@@ -2,6 +2,7 @@ package com.example.conversor;
 
 public class ConversorListaDoble extends Conversor{
     public ConversorListaDoble(){};
+
     @Override
     public void InfixToPostFix(String cadena){
         String cadenapostfix = "";
