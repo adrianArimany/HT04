@@ -8,7 +8,7 @@ public class CoversorStack extends Conversor {
     }
 
     @Override
-    public void InfixToPostFix(String cadena){
+    public String InfixToPostFix(String cadena){
         String cadenapostfix = "";
         String[] Tokens = cadena.split("");
         Stack<String> pila = new Stack<>();
@@ -46,6 +46,7 @@ public class CoversorStack extends Conversor {
         }
 
         setCadenaPostFix(cadenapostfix);
+                return cadenapostfix;
 
     }
 

@@ -1,15 +1,19 @@
 package com.example.gui;
-import javax.swing.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.List;
+
+import javax.swing.JFileChooser;
+
 /**
  * Handles user interactions (button clicks, file selection).
  */
 public class CalculadoraController {
     private final CalculadoraView view;
     private final CalculadoraModel model;
+
     public CalculadoraController(CalculadoraView view) {
         this.view = view;
         this.model = new CalculadoraModel();
@@ -36,7 +40,12 @@ public class CalculadoraController {
      * @param filePath the path to the file to process
      */
     private void processFile(String filePath) {
-        List<String> results = model.processFile(filePath);
+        // Retrieve the mode and conversor options from the view.
+        String mode = view.getSelectedMode();
+        boolean isInfix = mode.equals("Infix");
+        String conversorOption = view.getSelectedConversor();
+        
+        List<String> results = model.processFile(filePath, isInfix, conversorOption);
         if (results != null) {
             StringBuilder output = new StringBuilder();
             for (String line : results) {
@@ -47,6 +56,4 @@ public class CalculadoraController {
             GUIUtils.showErrorMessage("Error processing file.");
         }
     }
-
-
 }

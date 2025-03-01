@@ -7,7 +7,7 @@ public class ConversorArrayList extends Conversor{
     public ConversorArrayList(){};
     
     @Override
-    public void InfixToPostFix(String cadena){
+    public String InfixToPostFix(String cadena){
         String cadenapostfix = "";
         String[] Tokens = cadena.split("");
         ArrayList<String> ArrayTokens = new ArrayList<>();
@@ -44,6 +44,7 @@ public class ConversorArrayList extends Conversor{
         }
 
         setCadenaPostFix(cadenapostfix);
+                return cadenapostfix;
 
     }
 
