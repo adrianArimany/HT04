@@ -1,0 +1,8 @@
+package com.example.conversor;
+
+public interface ILista<T> {
+    void insertar(T dato);
+    T eliminar();
+    T obtenerTope();
+    boolean estaVacia();
+}

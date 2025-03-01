@@ -1,13 +1,31 @@
 package com.example;
 
+import com.example.data_manager.DataStorage;
+import com.example.gui.CalculadoraGUI;
+import com.example.utils.Logger;
+
+
 /**
- * Hello world!
- *
+ * 
+ * @version 1.0
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 public class App 
 {
-    public static void main( String[] args )
+    private static final Logger log = Logger.getInstance();
+
+    public static void main(String[] args)
     {
-        System.out.println( "Hello World!" );
+        try {
+            DataStorage.initialize();
+            new CalculadoraGUI().runGUI();
+        } catch (Exception e) {
+            log.logSevere("An error has occurred, please check the logs for more information.");
+            log.logInfo("This is the error message: " + e.getMessage());
+        }
     }
 }
